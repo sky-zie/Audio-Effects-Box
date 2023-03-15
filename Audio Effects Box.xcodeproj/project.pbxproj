@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D41B402B29C26671008A1437 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41B402A29C26671008A1437 /* Socket.swift */; };
+		D41B402E29C268E3008A1437 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = D41B402D29C268E3008A1437 /* SocketIO */; };
 		D477DDC729C22CF700B5E99E /* Audio_Effects_BoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D477DDC629C22CF700B5E99E /* Audio_Effects_BoxApp.swift */; };
 		D477DDC929C22CF700B5E99E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D477DDC829C22CF700B5E99E /* ContentView.swift */; };
 		D477DDCB29C22CFA00B5E99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D477DDCA29C22CFA00B5E99E /* Assets.xcassets */; };
 		D477DDCE29C22CFA00B5E99E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D477DDCD29C22CFA00B5E99E /* Preview Assets.xcassets */; };
+		D477DDD629C236DB00B5E99E /* Controls in Frameworks */ = {isa = PBXBuildFile; productRef = D477DDD529C236DB00B5E99E /* Controls */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D41B402A29C26671008A1437 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
 		D477DDC329C22CF700B5E99E /* Audio Effects Box.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Audio Effects Box.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D477DDC629C22CF700B5E99E /* Audio_Effects_BoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio_Effects_BoxApp.swift; sourceTree = "<group>"; };
 		D477DDC829C22CF700B5E99E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D477DDD629C236DB00B5E99E /* Controls in Frameworks */,
+				D41B402E29C268E3008A1437 /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +61,7 @@
 				D477DDC829C22CF700B5E99E /* ContentView.swift */,
 				D477DDCA29C22CFA00B5E99E /* Assets.xcassets */,
 				D477DDCC29C22CFA00B5E99E /* Preview Content */,
+				D41B402A29C26671008A1437 /* Socket.swift */,
 			);
 			path = "Audio Effects Box";
 			sourceTree = "<group>";
@@ -83,6 +90,10 @@
 			dependencies = (
 			);
 			name = "Audio Effects Box";
+			packageProductDependencies = (
+				D477DDD529C236DB00B5E99E /* Controls */,
+				D41B402D29C268E3008A1437 /* SocketIO */,
+			);
 			productName = "Audio Effects Box";
 			productReference = D477DDC329C22CF700B5E99E /* Audio Effects Box.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,10 @@
 				Base,
 			);
 			mainGroup = D477DDBA29C22CF700B5E99E;
+			packageReferences = (
+				D477DDD429C236DB00B5E99E /* XCRemoteSwiftPackageReference "Controls" */,
+				D41B402C29C268E3008A1437 /* XCRemoteSwiftPackageReference "socket" */,
+			);
 			productRefGroup = D477DDC429C22CF700B5E99E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +154,7 @@
 			files = (
 				D477DDC929C22CF700B5E99E /* ContentView.swift in Sources */,
 				D477DDC729C22CF700B5E99E /* Audio_Effects_BoxApp.swift in Sources */,
+				D41B402B29C26671008A1437 /* Socket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +357,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D41B402C29C268E3008A1437 /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D477DDD429C236DB00B5E99E /* XCRemoteSwiftPackageReference "Controls" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/Controls/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D41B402D29C268E3008A1437 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D41B402C29C268E3008A1437 /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
+		D477DDD529C236DB00B5E99E /* Controls */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D477DDD429C236DB00B5E99E /* XCRemoteSwiftPackageReference "Controls" */;
+			productName = Controls;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D477DDBB29C22CF700B5E99E /* Project object */;
 }
