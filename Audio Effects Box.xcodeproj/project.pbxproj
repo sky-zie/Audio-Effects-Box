@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D41B402B29C26671008A1437 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41B402A29C26671008A1437 /* Socket.swift */; };
-		D41B402E29C268E3008A1437 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = D41B402D29C268E3008A1437 /* SocketIO */; };
+		D44CCF0E29CCDB1700F8EB9C /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = D44CCF0D29CCDB1700F8EB9C /* Starscream */; };
 		D477DDC729C22CF700B5E99E /* Audio_Effects_BoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D477DDC629C22CF700B5E99E /* Audio_Effects_BoxApp.swift */; };
 		D477DDC929C22CF700B5E99E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D477DDC829C22CF700B5E99E /* ContentView.swift */; };
 		D477DDCB29C22CFA00B5E99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D477DDCA29C22CFA00B5E99E /* Assets.xcassets */; };
@@ -31,7 +31,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D477DDD629C236DB00B5E99E /* Controls in Frameworks */,
-				D41B402E29C268E3008A1437 /* SocketIO in Frameworks */,
+				D44CCF0E29CCDB1700F8EB9C /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +92,7 @@
 			name = "Audio Effects Box";
 			packageProductDependencies = (
 				D477DDD529C236DB00B5E99E /* Controls */,
-				D41B402D29C268E3008A1437 /* SocketIO */,
+				D44CCF0D29CCDB1700F8EB9C /* Starscream */,
 			);
 			productName = "Audio Effects Box";
 			productReference = D477DDC329C22CF700B5E99E /* Audio Effects Box.app */;
@@ -124,7 +124,7 @@
 			mainGroup = D477DDBA29C22CF700B5E99E;
 			packageReferences = (
 				D477DDD429C236DB00B5E99E /* XCRemoteSwiftPackageReference "Controls" */,
-				D41B402C29C268E3008A1437 /* XCRemoteSwiftPackageReference "socket" */,
+				D44CCF0C29CCDB1700F8EB9C /* XCRemoteSwiftPackageReference "Starscream" */,
 			);
 			productRefGroup = D477DDC429C22CF700B5E99E /* Products */;
 			projectDirPath = "";
@@ -359,12 +359,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D41B402C29C268E3008A1437 /* XCRemoteSwiftPackageReference "socket" */ = {
+		D44CCF0C29CCDB1700F8EB9C /* XCRemoteSwiftPackageReference "Starscream" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			repositoryURL = "https://github.com/daltoniam/Starscream";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
 			};
 		};
 		D477DDD429C236DB00B5E99E /* XCRemoteSwiftPackageReference "Controls" */ = {
@@ -378,10 +378,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D41B402D29C268E3008A1437 /* SocketIO */ = {
+		D44CCF0D29CCDB1700F8EB9C /* Starscream */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D41B402C29C268E3008A1437 /* XCRemoteSwiftPackageReference "socket" */;
-			productName = SocketIO;
+			package = D44CCF0C29CCDB1700F8EB9C /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
 		};
 		D477DDD529C236DB00B5E99E /* Controls */ = {
 			isa = XCSwiftPackageProductDependency;
